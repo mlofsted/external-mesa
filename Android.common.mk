@@ -102,6 +102,11 @@ else
   LOCAL_CFLAGS += -DDEFAULT_DRIVER_DIR=\"/system/lib/$(MESA_DRI_MODULE_REL_PATH)\"
 endif
 
+# bionic has required functions
+LOCAL_CFLAGS += \
+	-DHAVE_SHA1 -DHAVE_SHA1_IN_LIBC \
+	-Ibionic/libc/upstream-netbsd/android/include/sys
+
 # uncomment to keep the debug symbols
 #LOCAL_STRIP_MODULE := false
 
