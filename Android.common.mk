@@ -107,6 +107,9 @@ LOCAL_CFLAGS += \
 	-DHAVE_SHA1 -DHAVE_SHA1_IN_LIBC \
 	-Ibionic/libc/upstream-netbsd/android/include/sys
 
+# enable Android Vulkan
+LOCAL_CFLAGS += -DVK_USE_PLATFORM_ANDROID_KHR
+
 # uncomment to keep the debug symbols
 #LOCAL_STRIP_MODULE := false
 
