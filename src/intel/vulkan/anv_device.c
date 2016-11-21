@@ -253,6 +253,12 @@ static const VkExtensionProperties global_extensions[] = {
       .specVersion = 5,
    },
 #endif
+#ifdef VK_USE_PLATFORM_ANDROID_KHR
+   {
+      .extensionName = VK_KHR_ANDROID_SURFACE_EXTENSION_NAME,
+      .specVersion = 6,
+   },
+#endif
 };
 
 static const VkExtensionProperties device_extensions[] = {
